@@ -38,7 +38,7 @@ function generateResponse(input) {
     
 let data = {}
 const xhr = new XMLHttpRequest();
-xhr.open("GET", "https://jsonplaceholder.typicode.com/users",false);
+xhr.open("GET", "http://35.207.243.215:8080/chat?query="+input,false);
 xhr.onload = () => {
   if (xhr.readyState == 4 && xhr.status == 200) {
     data = JSON.parse(xhr.response);
