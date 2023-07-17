@@ -38,7 +38,7 @@ function generateResponse(input) {
     
 let data = {}
 const xhr = new XMLHttpRequest();
-xhr.open("GET", "aravindcz.com/chat?query="+input,false);
+xhr.open("GET", "http://aravindcz.com/chat?query="+input,false);
 xhr.onload = () => {
   if (xhr.readyState == 4 && xhr.status == 200) {
     data = JSON.parse(xhr.response);
